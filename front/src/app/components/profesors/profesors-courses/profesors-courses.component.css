@@ -1,0 +1,102 @@
+.container {
+    width: 70%;
+    margin: 3% 3%;
+    color: #192655;
+}
+.container-table{
+    min-height: 20vh;
+    max-height: 30vh;
+}
+.name-line {
+    background-color: orange;
+}
+
+.demo-table {
+    width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+    font-weight: bold;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+/* Estilos para la tabla */
+.table th,
+.table td {
+    background-color: #FDEEDC;
+    color: #192655;
+    
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Estilos para el formulario */
+.form-control,
+.btn-primary {
+    background-color: #FDEEDC;
+    color: #192655;
+}
+.btn-primary {
+    border: #FDEEDC;
+    max-width: 15%;
+}
+/* Estilos de imagen de perfil */
+.img-div{
+    display: flex;
+    align-items: center;
+}
+.img-container{
+    display: grid;
+    place-content: center;
+}
+
+.profile-img {
+    width: 164px;
+    height: 164px;
+    border: 2px solid orange;
+    border-radius: 32px;
+}
+
+.button-loadFile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid orange;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #fff;
+    color: orange;
+    font-weight: 500;
+    border-radius: 32px;
+}
+.button-loadFile:active {
+    background-color: orange !important;
+    color: white;
+}
+
+.button-loadFile input[type="file"] {
+    display: none;
+  }

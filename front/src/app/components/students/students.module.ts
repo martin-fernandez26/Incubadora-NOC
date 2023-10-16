@@ -33,6 +33,6 @@ import { PagoPageComponent } from './pago-page/pago-page.component';
     MatDatepickerModule,
     
   ],
-  exports: [LayoutComponent, ]
+  exports: [ ]
 })
 export class StudentModule { }

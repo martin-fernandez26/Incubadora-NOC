@@ -1,0 +1,119 @@
+<div class="container">
+    <div>
+        <h1>CURSOS</h1>
+        <div class="container-table" >
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha Inicio</th>
+                        <th scope="col">Alumnos</th>
+                        <th scope="col">Modalidad</th>
+                        <th scope="col">Progreso</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curso 1</td>
+                        <td>2023-01-01</td>
+                        <td>30</td>
+                        <td>Presencial</td>
+                        <td scope="col">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Curso 2</td>
+                        <td>2023-02-01</td>
+                        <td>25</td>
+                        <td>Virtual</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr *ngFor="let data of dataSource">
+                        <td>{{ data.name }}</td>
+                        <td>{{ data.fechaInicio }}</td>
+                        <td>{{ data.alumnos }}</td>
+                        <td>{{ data.modalidad }}</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Agrega más filas según tus datos -->
+                </tbody>
+                <!-- <nav aria-label="..." class="div-nav">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav> -->
+            </table>
+
+        </div>
+    </div>
+
+    <div class="">
+        <h1>Agregar curso</h1>
+        <form class="container-form">
+            <div class="img-div">
+                <div class="img-container">
+                    <img class="profile-img" [src]="imageSrc" *ngIf="imageSrc" alt="Imagen cargada">
+                </div>
+                <label class="button-loadFile custom-file-upload">
+                    <input type="file" (change)="onFileSelected($event)" accept="image/*" style="display:none;">
+                    Subir Foto
+                </label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="name" class="form-label ">Nombre</label>
+                    <input id="name" type="text" class="form-control " placeholder="Ingrese Nombre" required>
+                </div>
+                <div class="col">
+                    <label class="form-label">Fecha de Inicio</label>
+                    <input type="date" class="form-control" placeholder="Ingrese fecha de inicio">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-auto">
+                    <label class="form-label">Duracion (dias)</label>
+                    <input type="number" class="form-control" placeholder="Ingrese la duracion">
+                </div>
+                <div class="col col-auto">
+                    <label class="form-label">Precio</label>
+                    <input type="string" class="form-control" placeholder="Ingrese el precio">
+                </div>
+                <div>
+                    <label class="form-label">Descripcion</label>
+                    <textarea name="descripcion" id="" cols="30" rows="10" class="form-control "
+                        placeholder="Ingrese una descripcion"
+                        aria-describedby="descripcionHelpBlock">Ingrese una descripcion</textarea>
+                    <small id="descripcionHelpBlock" class="form-text text-muted">
+                        La descripcion tiene que tener entre 100-300 caracteres
+                    </small>
+                </div>
+
+            </div>
+            <button class="btn btn-primary">Agregar</button>
+
+        </form>
+
+
+    </div>
+
+</div>

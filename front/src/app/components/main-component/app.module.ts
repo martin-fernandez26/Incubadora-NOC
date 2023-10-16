@@ -31,6 +31,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     StudentsPersonalDataComponent,
     StudentsCoursesComponent,
     LayoutComponent,
+    ProfesorsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,285 @@
+/* Main content */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    height: 100vh;
+    text-align: center;
+}
+
+.grid-item{
+    display: flex;
+    align-items:flex-start; /* Centra verticalmente */
+    /* justify-content: center; Centra horizontalmente */
+}
+
+
+
+.card1 {
+    width: 550px;
+    height: 250px;
+    border-radius: 32px;
+    margin: 50px;
+    padding: 24px
+}
+
+.card-title {
+    color: #1E1B2C;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.034px;
+}
+
+.card-text {
+    color: #1E1B2C;
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.019px;
+}
+
+/* Boton de tarjeta */
+
+.card1-button {
+    background-color: transparent; 
+    border: 2px solid orange;
+    color: orange;
+    font-weight: 500;
+    border-radius: 32px; 
+}
+
+.card1-button:active {
+    background-color: orange !important;
+    color: white;
+}
+
+/* Estilos de imagen de perfil */
+
+.img-container{
+    display: grid;
+    place-content: center;
+}
+
+.profile-img {
+    width: 164px;
+    height: 164px;
+    border: 2px solid orange;
+    border-radius: 32px;
+}
+
+.button-loadFile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid orange;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #fff;
+    color: orange;
+    font-weight: 500;
+    border-radius: 32px;
+}
+.button-loadFile:active {
+    background-color: orange !important;
+    color: white;
+}
+
+.button-loadFile input[type="file"] {
+    display: none;
+  }
+
+/* Cuerpo de la tarjeta */
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 164px;
+
+}
+
+/* Calendar */
+
+/* .demo-inline-calendar-card {
+    width: 450px;
+    margin: 30px 200px 30px 0px;
+  } */
+  .demo-inline-calendar-card {
+    width: 45%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+  /* NOVEDADES */
+
+.gird-item-news {
+    grid-column: span 2;
+
+}
+
+.news-section {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-card{
+    width: 200px;
+    margin: 10px;
+  }
+
+  /* CURSOS */
+
+  .grid-item-courses{
+    margin: 50px;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-image-coursesCard {
+    background-image: url('~src/assets/img/incubadora-image.png');
+    background-size: cover;
+  }
+
+  .courses-card{
+    width: 200px;
+  }
+
+  /* calendar */
+  .container-calendar-event {
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    gap: 2em;
+}
+
+.calendar-events-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+}
+
+.year-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.months-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.months-row {
+    text-align: center;
+}
+
+.month {
+    padding: 10px;
+}
+
+.days-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.day {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.frame {
+    overflow: hidden;
+}
+
+.dates-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-row {
+    text-align: center;
+}
+
+.table-date {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.active-date {
+    background-color: #f3bb53;
+    color: #fff;
+}
+
+.event-card {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.dialog {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    width: 30%;
+}
+
+.dialog-header {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.button-white {
+    background-color: #fff;
+    border: 1px solid #ffa500;
+    color: #ffa500;
+    border-radius: 4px;
+}
+
+.button-white:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+

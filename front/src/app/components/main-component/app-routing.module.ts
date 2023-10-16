@@ -7,6 +7,9 @@ import { StudentsPersonalDataComponent } from '../students/students-personal-dat
 import { StudentsCoursesComponent } from '../students/students-courses/students-courses.component';
 import { LayoutComponent } from '../students/layout/layout.component';
 import { PagoPageComponent } from '../students/pago-page/pago-page.component';
+import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
+import { ProfesorsCoursesComponent } from '../profesors/profesors-courses/profesors-courses.component';
+import { ProfesorsPersonalDataComponent } from '../profesors/profesors-personal-data/profesors-personal-data.component';
 
 
 
@@ -20,6 +23,16 @@ const routes: Routes = [
     { path: 'student-personalData', component: StudentsPersonalDataComponent},
     { path: 'pago-page', component: PagoPageComponent},
   ],
+},
+{
+  path: 'profesors',
+  component: LayoutComponent,
+  children: [
+    {path: 'profesor-dashboard', component: ProfesorsComponent},
+    {path: 'profesor-courses', component: ProfesorsCoursesComponent},
+    {path: 'profesor-personalData', component: ProfesorsPersonalDataComponent }
+    
+  ]
 },
 
 { path: 'registro', component: FormularioRegistroComponent },
