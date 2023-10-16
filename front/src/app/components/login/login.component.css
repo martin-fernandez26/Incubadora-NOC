@@ -1,35 +1,40 @@
-.login-container{
+*{
+  position: relative;
+}
+
+.login {
+    height: 500px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    .login {
+      height: auto; /* Cambia la altura a automática en pantallas más pequeñas */
+    }
+  }
+
+  .login-container {
     max-width: 400px;
     margin: 2em auto;
     text-align: center;
     color: #F5670E;
     background-color: aliceblue;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      max-width: 90%; /* Cambia el ancho máximo en pantallas más pequeñas */
+    }
+  } 
 
-.login-form{
+  .login-form {
     display: grid;
     place-content: center;
-}
-
-/* .mat-raised-button {
-    background-color: #f44336;
-    color: white;
-} */
-
-.mensaje-crear-cuenta {
-    font-size: 14px;
-    margin-top: 20px;
   }
-
-.register-button{
-    color:  #eca678; 
-    text-decoration: none;
-    transition: color 0.2s;
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-a.register-button:hover {
-    color: #F5670E;
-    cursor: pointer; 
+  
+  @media (max-width: 768px) {
+    .login-form {
+      display: block; /* Cambia a bloque en pantallas más pequeñas */
+    }
   }

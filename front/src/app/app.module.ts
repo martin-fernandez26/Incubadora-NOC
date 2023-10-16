@@ -15,6 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { HeaderComponent } from './components/header/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -22,6 +24,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   declarations: [
     AppComponent,
     FormularioRegistroComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

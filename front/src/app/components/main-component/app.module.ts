@@ -24,6 +24,9 @@ import { StudentsCoursesComponent } from '../students/students-courses/students-
 import { LayoutComponent } from '../students/layout/layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HeaderComponent } from '../header/header/header.component'
+import { FooterComponent } from '../footer/footer.component'; 
+
 
 
 
@@ -41,6 +44,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     StudentsPersonalDataComponent,
     StudentsCoursesComponent,
     LayoutComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
