@@ -17,6 +17,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from './components/header/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 
 
@@ -26,6 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FormularioRegistroComponent,
     HeaderComponent,
     FooterComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

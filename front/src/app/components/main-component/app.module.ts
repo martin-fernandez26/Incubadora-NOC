@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from '../header/header/header.component'
 import { FooterComponent } from '../footer/footer.component'; 
+import { ErrorPageComponent } from '../error-page/error-page.component';
 
 
 
@@ -46,6 +47,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,

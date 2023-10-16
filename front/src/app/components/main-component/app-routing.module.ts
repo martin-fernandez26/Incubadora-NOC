@@ -6,6 +6,8 @@ import { StudentsComponent } from '../students/students/students.component';
 import { StudentsPersonalDataComponent } from '../students/students-personal-data/students-personal-data.component';
 import { StudentsCoursesComponent } from '../students/students-courses/students-courses.component';
 import { LayoutComponent } from '../students/layout/layout.component';
+import { ErrorPageComponent } from '../error-page/error-page.component';
+
 
 
 
@@ -28,13 +30,9 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('../../modules/dashboard/dashboard.module').then(m => m.DashboardModule),
   },
-  {
-    path: '**',
-    redirectTo: 'dashboard'
-  },
-
-
-];
+   { path: 'error', component: ErrorPageComponent },
+   { path: '**', redirectTo: 'error' },
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
