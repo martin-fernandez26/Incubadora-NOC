@@ -2,14 +2,14 @@
 
 <div id="header">
     <div id="header-left">
-        <img src="assets/img/incubadora-image.png" alt="Logo" class="logo">
+      <a routerLink="/dashboard"> <img src="assets/img/incubadora-image.png" alt="Logo" class="logo"></a> 
     </div>
     <div id="header-right">
-        <a class="menu" href="#"><p>INICIO</p></a>
-        <a class="menu"href="#"> <p>CURSOS</p></a>
-        <a class="menu"href="#"> <p>NOSOTROS</p></a>
-        <a href="#"><button class="redondo">CREAR CUENTA</button></a>
-        <a href="#"><button class="redondo" id="dos">INICIAR SESION</button></a>
+        <a class="menu" routerLink="/dashboard"><p>INICIO</p></a>
+        <a class="menu" routerLink="/students/student-courses"> <p>CURSOS</p></a>
+        <a class="menu" routerLink="/students/student-personalData"> <p>NOSOTROS</p></a>
+        <a  routerLink="/registro"><button class="redondo">CREAR CUENTA</button></a>
+        <a routerLink="/login"><button class="redondo" id="dos">INICIAR SESION</button></a>
     </div>
 </div>
 
