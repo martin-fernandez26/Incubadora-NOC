@@ -14,7 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { LoginComponent } from '../login/login.component';
 import { StudentsComponent } from '../students/students/students.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -24,14 +24,9 @@ import { StudentsCoursesComponent } from '../students/students-courses/students-
 import { LayoutComponent } from '../students/layout/layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-
-
-
-
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
+import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +38,7 @@ import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
     StudentsCoursesComponent,
     LayoutComponent,
     ProfesorsComponent,
+    LayoutProfComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +61,7 @@ import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
     MatToolbarModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

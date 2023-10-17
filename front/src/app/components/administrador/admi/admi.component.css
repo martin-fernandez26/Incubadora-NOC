@@ -1,0 +1,41 @@
+.container {
+    width: 70%;
+    margin: 3% 3%;
+}
+
+.container-table{
+    min-height: 20vh;
+    max-height: 30vh;
+}
+
+.name-line {
+    background-color: orange;
+}
+
+.demo-table {
+    width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+    font-weight: bold;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LayoutComponent } from '../students/layout/layout.component';
+
 import { ProfesorsComponent } from './profesors/profesors.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,15 +13,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 
 import { MatInputModule } from '@angular/material/input';
-import { RouterModule } from '@angular/router';
 import { ProfesorsPersonalDataComponent } from './profesors-personal-data/profesors-personal-data.component';
+import { MatSelectModule } from '@angular/material/select';
+import { LayoutProfComponent } from './layout-prof/layout-prof.component';
+import { RouterModule} from '@angular/router';
+import { MatOptionModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
-    LayoutComponent,
     ProfesorsComponent,
     ProfesorsCoursesComponent,
     ProfesorsPersonalDataComponent,
+    LayoutProfComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +38,9 @@ import { ProfesorsPersonalDataComponent } from './profesors-personal-data/profes
     MatInputModule,
     FormsModule,
     MatSidenavModule,
-    RouterModule
+    MatSelectModule,
+    RouterModule,
+    MatOptionModule
   ]
 })
 export class ProfesorsModule { }

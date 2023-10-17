@@ -1,5 +1,7 @@
 
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -8,25 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profesors-courses.component.css'],
 })
 export class ProfesorsCoursesComponent implements OnInit {
+  dataSource: any[] = []; //para la tabla
+  imageSrc: string | ArrayBuffer | null = null; //para la imagen 
+  newCourse: any = {}; // para agregar un curso
+  
+  constructor(private http: HttpClient) {}
 
 
-  constructor() { }
 
-  dataSource = [
-    { name: 'Curso 3', fechaInicio: '2023-10-25', alumnos: 20, modalidad: 'Presencial', progreso: 75},
-    { name: 'Curso 4', fechaInicio: '2023-10-30', alumnos: 25, modalidad: 'Virtual',  progreso: 55 },
-    { name: 'Curso 5', fechaInicio: '2023-11-21', alumnos: 25, modalidad: 'Virtual', progreso: 90 },
-    // Agrega más datos según sea necesario
-  ];
-
-  imageSrc: string | ArrayBuffer | null = null;
-  curso = {
-    nombre: '',
-    fechaInicio: ''
-  };
-  procesar() {
-    console.log(this.curso)
-  }
+  // subir una imagen
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
     const reader = new FileReader();
@@ -37,7 +29,38 @@ export class ProfesorsCoursesComponent implements OnInit {
   }
 
   uploadImage() { }
+  // agregar un curso
+  
+  addCourse(): void {
+    this.http.post('http://localhost:4001/courses/addCourse', this.newCourse)
+      .subscribe(
+        (data) => {
+          console.log('Curso agregado con éxito: ', data);
+          // Realiza alguna lógica adicional después de agregar el curso si es necesario
+        },
+        (error) => {
+          console.log('Error al agregar el curso: ', error);
+        }
+      );
+  }
+  // traemos los datos para la tabla 
+  fetchDataCourse(): void {
+    const maxItems = 5;
+    this.http.get<any[]>('http://localhost:4001/cursos/getAll')
+      .pipe(
+        map(data => data.slice(0, maxItems))
+      )
+      .subscribe(
+        (data) => {
+          this.dataSource = data;
+        },
+        (error) => {
+          console.log('Error al obtener datos desde el backend: ', error);
+        }
+      );
+  }
   ngOnInit(): void {
+    this.fetchDataCourse();
   }
 
 

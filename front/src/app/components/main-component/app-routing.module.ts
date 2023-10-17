@@ -10,6 +10,7 @@ import { PagoPageComponent } from '../students/pago-page/pago-page.component';
 import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
 import { ProfesorsCoursesComponent } from '../profesors/profesors-courses/profesors-courses.component';
 import { ProfesorsPersonalDataComponent } from '../profesors/profesors-personal-data/profesors-personal-data.component';
+import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
 
 
 
@@ -26,7 +27,7 @@ const routes: Routes = [
 },
 {
   path: 'profesors',
-  component: LayoutComponent,
+  component: LayoutProfComponent,
   children: [
     {path: 'profesor-dashboard', component: ProfesorsComponent},
     {path: 'profesor-courses', component: ProfesorsCoursesComponent},

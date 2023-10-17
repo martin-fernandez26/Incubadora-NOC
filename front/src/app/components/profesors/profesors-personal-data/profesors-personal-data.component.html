@@ -1,1 +1,64 @@
-<p>profesors-personal-data works!</p>
+<div class="container">
+    <h1>Mis Datos</h1>
+    <form class="container-form">
+        <div class="img-div col">
+            <div class="img-container">
+                <img class="profile-img" [src]="imageSrc" *ngIf="imageSrc" alt="Imagen cargada">
+            </div>
+            <label class="button-loadFile custom-file-upload">
+                <input type="file" (change)="onFileSelected($event)" accept="image/*" style="display:none;">
+                Subir Foto
+            </label>
+        </div>
+        <div class="">
+            <div class="row">
+                <div class="col">
+                    <label for="name" class="form-label ">Nombre Completo</label>
+                    <input id="name" type="text" class="form-control "  [value]="profesor.nombreCompleto" required>
+                </div>
+                <div class="col">
+                    <label class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control" [value]="profesor.nombreUsuario"  required>
+                </div>
+                <div class="col">
+                    <label class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" [value]="profesor.fechaNacimiento"  required>
+                </div>
+                <!-- Genero pendiente -->
+                <div class="col">
+                    <label for="gender" class="form-label">Género</label>
+                    <input id="gender" type="text" class="form-control" [value]="profesor.genero"  required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-auto">
+                <label class="form-label">Profesion</label>
+                <input type="text" class="form-control" [value]="profesor.profesion" >
+            </div>
+            <div class="col col-auto">
+                <label class="form-label">Tipo de Contenido</label>
+                <input type="text" class="form-control" [value]="profesor.tipoContenido" >
+            </div>
+            <div class="col col-auto">
+                <label class="form-label">Modalidad</label>
+                <input type="text" class="form-control" [value]="profesor.modalidad" >
+            </div>
+            <div class="col col-auto">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" [value]="profesor.email">
+            </div>
+            <div class="col col-auto">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" [value]="profesor.password" >
+            </div>
+
+
+        </div>
+        <button class="btn btn-primary" (click)="sendDataModificProfesor(data)">Modificar</button>
+
+    </form>
+
+
+</div>
