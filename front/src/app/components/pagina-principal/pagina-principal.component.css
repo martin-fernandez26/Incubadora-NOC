@@ -71,7 +71,7 @@ h1 {
 
 }
 
-
+/*
 .detalles{
     color: white;       
     background-color:  #0056b3;  
@@ -84,7 +84,22 @@ h1 {
     
 }
 
-
+*/
+.descripcion {
+    text-align: center;
+  }
+  
+  .detalles {
+    color: white;
+    background-color: #0056b3;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    display: block; /* Cambia display a block para que ocupe todo el ancho del contenedor padre */
+    margin: 0 auto; /* Centra horizontalmente el botón dentro de su contenedor */
+    margin-top: 10px; /* Agrega espacio superior para separar los botones */
+  }
+  
 
 .cursos{      
     display: flex;
