@@ -21,13 +21,6 @@ export class ProfesorsComponent implements OnInit {
 
   uploadImage() { }
 
-  // user = {
-  //   nombreCompleto: 'Marcelo Juarez',
-  //   email: 'marcelo1534@gmail.com', 
-  //   gender: 'Masculino',
-  //   username: 'marcelo265',
-  //   profileImage: '',
-  // };
 
   coments = [
     {
@@ -52,7 +45,7 @@ export class ProfesorsComponent implements OnInit {
   selected: Date | null;
   // datos traidos del back
   courses: any[] = [];
-  user: any = {};
+  profesor: any = {};
   constructor(private http: HttpClient) {
     this.selected = null;
   }
@@ -67,12 +60,11 @@ export class ProfesorsComponent implements OnInit {
         }
       );
     // Realiza la solicitud GET al backend para obtener el usuario con ID 4
-    this.http.get<any>('http://localhost:4001/profesor//getProfesorById', {
-      params: { id: '4' } // Ajusta el ID según tus necesidades
-    })
+    this.http.get<any>(`http://localhost:4001/profesors/getProfesorById/${4}`)
       .subscribe(
         (data) => {
-          this.user = data; // Almacena los datos del usuario en la variable user
+          this.profesor = data; // Almacena los datos del usuario en la variable user
+          console.log(data)
         },
         (error) => {
           console.log('Error al obtener profesor: ', error);

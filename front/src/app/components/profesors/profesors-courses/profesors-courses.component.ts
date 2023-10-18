@@ -32,7 +32,7 @@ export class ProfesorsCoursesComponent implements OnInit {
   // agregar un curso
   
   addCourse(): void {
-    this.http.post('http://localhost:4001/courses/addCourse', this.newCourse)
+    this.http.post('http://localhost:4001/cursos/createCurso', this.newCourse)
       .subscribe(
         (data) => {
           console.log('Curso agregado con éxito: ', data);
@@ -53,6 +53,7 @@ export class ProfesorsCoursesComponent implements OnInit {
       .subscribe(
         (data) => {
           this.dataSource = data;
+          console.log(data)
         },
         (error) => {
           console.log('Error al obtener datos desde el backend: ', error);

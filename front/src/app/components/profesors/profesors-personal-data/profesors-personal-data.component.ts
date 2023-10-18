@@ -32,9 +32,7 @@ export class ProfesorsPersonalDataComponent implements OnInit {
   }
 
   fetchProfesorData(): void {
-    this.http.get<any>('http://localhost:4001/profesors/getProfesorById', {
-      params: { id: '4' } // Ajusta el ID según tus necesidades
-    })// Reemplaza la URL con tu endpoint real
+    this.http.get<any>(`http://localhost:4001/profesors/getProfesorById/${4}`)// Reemplaza la URL con tu endpoint real
       .subscribe((data) => {
         this.profesor = data; // Asigna los datos recibidos del backend a la propiedad user
       }, (error) => {

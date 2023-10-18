@@ -1,24 +1,30 @@
 /* Main content */
 
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
+.container {
+    display: flex;
     height: 100vh;
     text-align: center;
+    flex-direction: column;
 }
 
-.grid-item{
+
+.data-calendar-container, .courses-news-container{
     display: flex;
-    align-items:flex-start; /* Centra verticalmente */
+    flex-direction: row;
+    width: 85%;
+}
+
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    /* Centra verticalmente */
+    width: 55%;
     /* justify-content: center; Centra horizontalmente */
 }
 
-
-
 .card1 {
-    width: 550px;
-    height: 250px;
+
     border-radius: 32px;
     margin: 50px;
     padding: 24px
@@ -47,11 +53,11 @@
 /* Boton de tarjeta */
 
 .card1-button {
-    background-color: transparent; 
+    background-color: transparent;
     border: 2px solid orange;
     color: orange;
     font-weight: 500;
-    border-radius: 32px; 
+    border-radius: 32px;
 }
 
 .card1-button:active {
@@ -61,7 +67,7 @@
 
 /* Estilos de imagen de perfil */
 
-.img-container{
+.img-container {
     display: grid;
     place-content: center;
 }
@@ -87,6 +93,7 @@
     font-weight: 500;
     border-radius: 32px;
 }
+
 .button-loadFile:active {
     background-color: orange !important;
     color: white;
@@ -94,7 +101,7 @@
 
 .button-loadFile input[type="file"] {
     display: none;
-  }
+}
 
 /* Cuerpo de la tarjeta */
 
@@ -108,57 +115,73 @@
 
 /* Calendar */
 
-/* .demo-inline-calendar-card {
-    width: 450px;
-    margin: 30px 200px 30px 0px;
-  } */
-  .demo-inline-calendar-card {
+.demo-inline-calendar-card {
     width: 45%;
     margin: 5%;
     display: flex;
     justify-content: center;
 }
 
-  /* NOVEDADES */
+/* comentarios*/
 
-.gird-item-news {
-    grid-column: span 2;
+.item-news {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
 
+.news-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .news-section {
-    width: 600px;
-    height: auto;
     display: flex;
-    flex-direction: column;
-  }
+    width: 80%;
+}
 
-  .news-card{
-    width: 200px;
+.news-card {
+    width: auto;
     margin: 10px;
-  }
+}
 
-  /* CURSOS */
+/* CURSOS */
 
-  .grid-item-courses{
-    margin: 50px;
-    width: 600px;
-    height: auto;
+.item-courses {
+    width: 80%;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .header-image-coursesCard {
+.header-image-coursesCard {
     background-image: url('~src/assets/img/incubadora-image.png');
     background-size: cover;
-  }
+}
 
-  .courses-card{
+.courses-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.courses-section {
+    display: flex;
+    width: auto;
+}
+
+.courses-card {
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    padding: 16px;
+    border-radius: 4px;
+    flex-direction: column;
+    align-items: center;
     width: 200px;
-  }
+}
 
-  /* calendar */
-  .container-calendar-event {
+/* calendar */
+.container-calendar-event {
     margin: 50px auto;
     width: 80%;
     display: flex;
@@ -282,4 +305,3 @@
     background-color: #ffa500;
     color: #fff;
 }
-

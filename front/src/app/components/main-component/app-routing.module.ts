@@ -11,6 +11,9 @@ import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
 import { ProfesorsCoursesComponent } from '../profesors/profesors-courses/profesors-courses.component';
 import { ProfesorsPersonalDataComponent } from '../profesors/profesors-personal-data/profesors-personal-data.component';
 import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
+import { AdmiComponent } from '../administrador/admi/admi.component';
+import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.component';
+import { AdmiApplicationComponent } from '../administrador/admi-application/admi-application.component';
 
 
 
@@ -32,6 +35,15 @@ const routes: Routes = [
     {path: 'profesor-dashboard', component: ProfesorsComponent},
     {path: 'profesor-courses', component: ProfesorsCoursesComponent},
     {path: 'profesor-personalData', component: ProfesorsPersonalDataComponent }
+    
+  ]
+},
+{
+  path: 'admi', 
+  component: LayoutAdmiComponent,
+  children: [
+    {path: 'admi-dashboard', component: AdmiComponent},
+    {path: 'admi-application', component: AdmiApplicationComponent},
     
   ]
 },

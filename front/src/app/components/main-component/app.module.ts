@@ -27,6 +27,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
 import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
+import { AdmiComponent } from '../administrador/admi/admi.component';
+import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.compon
     StudentsCoursesComponent,
     LayoutComponent,
     ProfesorsComponent,
-    LayoutProfComponent
+    LayoutProfComponent,
+    AdmiComponent,
+    LayoutAdmiComponent
   ],
   imports: [
     BrowserModule,
