@@ -14,6 +14,7 @@ import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.compon
 import { AdmiComponent } from '../administrador/admi/admi.component';
 import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.component';
 import { AdmiApplicationComponent } from '../administrador/admi-application/admi-application.component';
+import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
 
 
 
@@ -50,6 +51,7 @@ const routes: Routes = [
 
 { path: 'registro', component: FormularioRegistroComponent },
 { path: 'login', component: LoginComponent},
+{ path: 'pagina-inicio', component: PaginaPrincipalComponent },
 
   
 

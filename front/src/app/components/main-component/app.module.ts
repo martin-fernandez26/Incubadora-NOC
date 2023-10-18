@@ -24,6 +24,12 @@ import { StudentsCoursesComponent } from '../students/students-courses/students-
 import { LayoutComponent } from '../students/layout/layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
+import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
+
+
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
 import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
@@ -39,10 +45,6 @@ import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.co
     StudentsPersonalDataComponent,
     StudentsCoursesComponent,
     LayoutComponent,
-    ProfesorsComponent,
-    LayoutProfComponent,
-    AdmiComponent,
-    LayoutAdmiComponent
   ],
   imports: [
     BrowserModule,
