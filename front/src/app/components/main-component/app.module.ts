@@ -35,6 +35,7 @@ import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
 import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
 import { AdmiComponent } from '../administrador/admi/admi.component';
 import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.component';
+import { AdmiApplicationComponent } from '../administrador/admi-application/admi-application.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,12 @@ import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.co
     StudentsPersonalDataComponent,
     StudentsCoursesComponent,
     LayoutComponent,
+    ProfesorsComponent,
+    LayoutProfComponent,
+    AdmiComponent,
+    AdmiApplicationComponent,
+    LayoutAdmiComponent,
+    PaginaPrincipalComponent,
   ],
   imports: [
     BrowserModule,

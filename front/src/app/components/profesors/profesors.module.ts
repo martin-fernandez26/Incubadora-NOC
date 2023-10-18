@@ -40,7 +40,7 @@ import { MatOptionModule } from '@angular/material/core';
     MatSidenavModule,
     MatSelectModule,
     RouterModule,
-    MatOptionModule
+    MatOptionModule,
   ]
 })
 export class ProfesorsModule { }
