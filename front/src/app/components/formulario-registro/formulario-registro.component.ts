@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ServiceRegService } from 'src/app/service/service-reg.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 interface Generos {
   genero: string;
@@ -26,7 +27,8 @@ export class FormularioRegistroComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -47,23 +49,28 @@ export class FormularioRegistroComponent implements OnInit {
      
       const datosEnviar= {
         nombreCompleto: formData.nombreCompleto,
-        nombreUsuario: formData.user,
-        contraseña: formData.password,
-        correoElectronico: formData.email,
-        genero: formData.gender,
+        nombreUsuario: formData.nombreUsuario,
+        contraseña: formData.contraseña,
+        correoElectronico: formData.correoElectronico,
+        genero: formData.genero,
       }
 
-      this.http.post('http://localhost:4001/createUser', datosEnviar).subscribe(
+      this.http.post('http://localhost:4001/users/createUser', datosEnviar).subscribe(
         (response: any) => {
           // Manejar la respuesta del backend (éxito)
           console.log('Usuario registrado exitosamente', response);
           this.mostrarMensaje('Usuario registrado exitosamente', 'success');
+          this.router.navigate(['/login']);
         },
         (error: HttpErrorResponse) => {
-          // Manejar el error del backend (fallo)
-          console.error('Error al registrar usuario', error);
-          this.mostrarMensaje('Error al registrar usuario', 'error');
+          if (error.status === 409) {
+            this.mostrarMensaje('El Usuario  ya existente', 'error');
+          } else {
+            console.error('Error al registrar usuario', error);
+            this.mostrarMensaje('Error al registrar usuario', 'error');
+          }
         }
+
       );
     }
   }

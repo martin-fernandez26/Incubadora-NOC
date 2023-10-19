@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       fechaNacimiento: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
       genero: {
