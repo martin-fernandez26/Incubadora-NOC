@@ -24,8 +24,8 @@ import { StudentsCoursesComponent } from '../students/students-courses/students-
 import { LayoutComponent } from '../students/layout/layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-
+import { WelcomeStudentComponent } from '../students/welcome-student/welcome-student.component';
+import { FormularioProfesorComponent } from '../formulario-profesor/formulario-profesor.component';
 import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
 
 
@@ -55,6 +55,8 @@ import { ProfesorsCoursesComponent } from '../profesors/profesors-courses/profes
     AdmiApplicationComponent,
     LayoutAdmiComponent,
     PaginaPrincipalComponent,
+    WelcomeStudentComponent,
+    FormularioProfesorComponent,
   ],
   imports: [
     BrowserModule,

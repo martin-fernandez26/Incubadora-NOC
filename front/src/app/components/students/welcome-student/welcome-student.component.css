@@ -1,0 +1,13 @@
+.welcome-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 200px;
+    height: 100vh;
+}
+
+.welcome-image{
+    width: 600px;
+    height: 600px;
+    border-radius: 32px;
+}
