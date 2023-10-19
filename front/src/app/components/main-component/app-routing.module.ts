@@ -27,7 +27,13 @@ const routes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'pagina-inicio', component: PaginaPrincipalComponent },
 
+
   
+
+
+ 
+  
+
 
   {
     path: 'dashboard',
