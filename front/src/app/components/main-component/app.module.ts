@@ -14,7 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { LoginComponent } from '../login/login.component';
 import { StudentsComponent } from '../students/students/students.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -27,12 +27,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { WelcomeStudentComponent } from '../students/welcome-student/welcome-student.component';
 import { FormularioProfesorComponent } from '../formulario-profesor/formulario-profesor.component';
 import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
-import { MatTableModule } from '@angular/material/table';
 
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { ProfesorsComponent } from '../profesors/profesors/profesors.component';
+import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.component';
+import { AdmiComponent } from '../administrador/admi/admi.component';
+import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.component';
+import { AdmiApplicationComponent } from '../administrador/admi-application/admi-application.component';
+import { MatTableModule } from '@angular/material/table';
+import { ProfesorsCoursesComponent } from '../profesors/profesors-courses/profesors-courses.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +48,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     StudentsPersonalDataComponent,
     StudentsCoursesComponent,
     LayoutComponent,
+    ProfesorsComponent,
+    ProfesorsCoursesComponent,
+    LayoutProfComponent,
+    AdmiComponent,
+    AdmiApplicationComponent,
+    LayoutAdmiComponent,
     PaginaPrincipalComponent,
     WelcomeStudentComponent,
     FormularioProfesorComponent,
@@ -68,8 +79,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatToolbarModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatTableModule,
-   
+    MatOptionModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

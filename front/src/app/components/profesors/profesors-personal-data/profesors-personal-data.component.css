@@ -1,0 +1,61 @@
+.button-loadFile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid orange;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #fff;
+    color: orange;
+    font-weight: 500;
+    border-radius: 32px;
+}
+
+.button-loadFile:active {
+    background-color: orange !important;
+    color: white;
+}
+
+.button-loadFile input[type="file"] {
+    display: none;
+}
+
+.container {
+    width: 70%;
+    margin: 8% 3%;
+    color: #192655;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Estilos para el formulario */
+.form-control,
+.btn-primary {
+    background-color: #FDEEDC;
+    color: #192655;
+}
+.btn-primary {
+    border: #FDEEDC;
+    max-width: 15%;
+}
+/* Estilos de imagen de perfil */
+.img-div{
+    display: flex;
+    align-items: center;
+}
+.img-container{
+    display: grid;
+    place-content: center;
+}
+
+.profile-img {
+    width: 164px;
+    height: 164px;
+    border: 2px solid orange;
+    border-radius: 32px;
+}

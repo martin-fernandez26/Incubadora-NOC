@@ -1,0 +1,38 @@
+<div class="container">
+
+  <div class="todo-calendar-container">
+    <!-- Calendar -->
+    <div class="grid-item-calendar">
+      <div class="calendar-container">
+        <mat-card class="demo-inline-calendar-card">
+          <mat-calendar class="calendar-item" [(selected)]="selected"></mat-calendar>
+        </mat-card>
+        <p class="selected-date">Selected date: {{selected}}</p>
+      </div>
+    </div>
+    <!--TodoList-->
+    <div class="mainCard">
+      <div>
+        <form (ngSubmit)="addTask(task.value, date.value)" #taskForm="ngForm">
+          <input type="text" name="task" placeholder="Nombre de la tarea" class="inputForm" autocomplete="off"
+            data-form-input #task required />
+          <input type="datetime-local" placeholder="YYYY/MM/DD" #date required />
+          <button type="submit" class="btnCreate" data-form-btn>
+            Agregar <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+      </div>
+      <ul class="cardsList" data-list>
+        <li class="card" *ngFor="let task of tasks; let i = index">
+          {{ task }}
+          <button (click)="deleteTask(i)">Eliminar</button>
+          <button (click)="checkComplete(task)">Marcar como completado</button>
+        </li>
+      </ul>
+      <button (click)="readTask()">Mostrar tareas</button>
+    </div>
+  </div>
+
+
+
+</div>

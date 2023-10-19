@@ -8,11 +8,13 @@
         <p>Titular: Juarez Jose</p>
         <p>Banco: Macro</p>
     </div>
-    <div class="">
-
+    <div class="img-div">
+        <div class="img-container">
+            <img class="profile-img" [src]="imageSrc" *ngIf="imageSrc" alt="Imagen cargada">
+        </div>
         <label class="button-loadFile custom-file-upload">
-          <input  class="input" type="file"  accept="image/*" placeholder="Subir comprobante">
-          
+            <input type="file" (change)="onFileSelected($event)" accept="image/*" style="display:none;">
+            Subir comprobante
         </label>
     </div>
 </div>

@@ -1,0 +1,97 @@
+<div class="ud-main-content container">
+    <div class="data-calendar-container">
+        <!-- ITEM 1 -->
+
+        <div class="item">
+            <div class="card mb-3 card1">
+                <div class="row g-0">
+                    <div class="col-md-4 img-container">
+                        <div class="img-container">
+                            <img class="profile-img" [src]="imageSrc" *ngIf="imageSrc" alt="Imagen cargada">
+                        </div>
+                        <label class="button-loadFile custom-file-upload">
+                            <input type="file" (change)="onFileSelected($event)" accept="image/*" style="display:none;">
+                            Subir Foto
+                        </label>
+                    </div>
+                    <div class="card1-body" class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="card-title">{{ profesor.nombreCompleto }}</h1>
+                            <p class="card-text">Correo: {{ profesor.correoElectronico }}</p>
+                            <p class="card-text">Género: {{ profesor.genero }}</p>
+                            <p class="card-text">Usuario: {{ profesor.nombreUsuario }}</p>
+                            <button type="button" class="btn card1-button"
+                                routerLink="/profesors/profesor-personalData">Mis
+                                Datos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 2 Calendar-->
+        <div class="item-calendar">
+            <div class="calendar-container">
+                <mat-card class="demo-inline-calendar-card">
+                    <mat-calendar class="calendar-item" [(selected)]="selected"></mat-calendar>
+                </mat-card>
+
+                    <p class="selected-date">Selected date: {{selected}}</p>
+                
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="courses-news-container">
+        <div class="item-courses">
+            <h1>MIS CURSOS</h1>
+            <div class="courses-container">
+                <mat-card class="courses-section" *ngFor="let coursesItem of courses">
+
+                    <mat-card class="courses-card">
+                        <mat-card-header>
+                            <div mat-card-avatar class="header-image-coursesCard"></div>
+                            <mat-card-title> {{ coursesItem.nombre }}</mat-card-title>
+                        </mat-card-header>
+                        <!-- <img mat-card-image [src]="coursesItem.img" alt="Foto del curso"> -->
+                        <mat-card-content>
+                            <p>Descripción: {{ coursesItem.descripcion }}</p>
+                        </mat-card-content>
+                    </mat-card>
+
+                </mat-card>
+            </div>
+
+        </div>
+
+
+        <!-- Comentarios -->
+        <div class="item-news">
+            <h1 class="section-title">Comentarios</h1>
+            <div class="news-container">
+                <mat-card class="news-section" *ngFor="let item of coments">
+
+                    <mat-card class="news-card ">
+                        <mat-card-title class="news-card-title">{{ item.title }}</mat-card-title>
+                        <div class="news-card-description">
+                            <p> Fecha: {{ item.fecha}}</p>
+                            <p>{{ item.description }}</p>
+                        </div>
+
+                    </mat-card>
+
+
+                </mat-card>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
