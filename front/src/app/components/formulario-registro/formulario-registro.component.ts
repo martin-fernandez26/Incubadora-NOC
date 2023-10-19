@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ServiceRegService } from 'src/app/service/service-reg.service';
 import { HttpResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 interface Generos {
   gender: string;
@@ -30,7 +31,8 @@ export class FormularioRegistroComponent implements OnInit {
     private formBuilder: FormBuilder,
     private registroService: ServiceRegService,
     public dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -53,7 +55,16 @@ export class FormularioRegistroComponent implements OnInit {
   onSubmit() {
     if (this.myForm.valid) {
       const formData = this.myForm.value;
-      this.registroService.registrarUsuario(formData).subscribe(
+     
+      const datosEnviar= {
+        nombreCompleto: formData.nombreCompleto,
+        nombreUsuario: formData.user,
+        contraseña: formData.password,
+        correoElectronico: formData.email,
+        genero: formData.gender,
+      }
+
+      this.http.post('http://localhost:4200/createUser', datosEnviar).subscribe(
         (response: any) => {
           // Manejar la respuesta del backend (éxito)
           console.log('Usuario registrado exitosamente', response);
