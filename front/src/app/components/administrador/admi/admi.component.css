@@ -1,11 +1,16 @@
 .container {
-    width: 70%;
+    width: 80%;
     margin: 3% 3%;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
-
+.todo-calendar-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
 /* Calendar */
 
 .demo-inline-calendar-card {
@@ -16,10 +21,7 @@
 }
 
 .grid-item-calendar {
-    flex: 0 1 calc(33.33% - 20px);
-    margin-left: 100px;
-
-
+    flex: 0 1 calc(40% - 20px);
 }
 
 .calendar-item {
@@ -62,18 +64,19 @@ li {
 }
 
 .mainCard {
-    width: 40vw;
+    width: auto;
     border-radius: 25px;
     background-color: #fff;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 45vh;
 }
 
-.title {
-    font-family: 'Dosis', sans-serif;
+form{
     display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 15px;
+    justify-content: space-between;
 }
 
 .inputForm {
