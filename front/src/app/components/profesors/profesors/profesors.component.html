@@ -30,13 +30,16 @@
         </div>
 
         <!-- ITEM 2 Calendar-->
-        <div class="item">
-            <mat-card class="demo-inline-calendar-card">
-                <mat-calendar [(selected)]="selected"></mat-calendar>
-            </mat-card>
-            <div>
-                <p>Selected date: {{selected}}</p>
+        <div class="item-calendar">
+            <div class="calendar-container">
+                <mat-card class="demo-inline-calendar-card">
+                    <mat-calendar class="calendar-item" [(selected)]="selected"></mat-calendar>
+                </mat-card>
+
+                    <p class="selected-date">Selected date: {{selected}}</p>
+                
             </div>
+
 
         </div>
 
@@ -64,15 +67,21 @@
             </div>
 
         </div>
+
+
+        <!-- Comentarios -->
         <div class="item-news">
-            <h1>Comentarios</h1>
+            <h1 class="section-title">Comentarios</h1>
             <div class="news-container">
                 <mat-card class="news-section" *ngFor="let item of coments">
 
                     <mat-card class="news-card ">
-                        <mat-card-title>{{ item.title }}</mat-card-title>
-                        <p> Fecha: {{ item.fecha}}</p>
-                        <p>{{ item.description }}</p>
+                        <mat-card-title class="news-card-title">{{ item.title }}</mat-card-title>
+                        <div class="news-card-description">
+                            <p> Fecha: {{ item.fecha}}</p>
+                            <p>{{ item.description }}</p>
+                        </div>
+
                     </mat-card>
 
 

@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmiComponent implements OnInit {
 
-  constructor() { }
+  selected: Date | null;
+  constructor() {
+    this.selected = null;
+   }
 
   ngOnInit(): void {
   }

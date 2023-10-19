@@ -36,6 +36,8 @@ import { LayoutProfComponent } from '../profesors/layout-prof/layout-prof.compon
 import { AdmiComponent } from '../administrador/admi/admi.component';
 import { LayoutAdmiComponent } from '../administrador/layout-admi/layout-admi.component';
 import { AdmiApplicationComponent } from '../administrador/admi-application/admi-application.component';
+import { MatTableModule } from '@angular/material/table';
+import { ProfesorsCoursesComponent } from '../profesors/profesors-courses/profesors-courses.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { AdmiApplicationComponent } from '../administrador/admi-application/admi
     StudentsCoursesComponent,
     LayoutComponent,
     ProfesorsComponent,
+    ProfesorsCoursesComponent,
     LayoutProfComponent,
     AdmiComponent,
     AdmiApplicationComponent,
@@ -74,7 +77,8 @@ import { AdmiApplicationComponent } from '../administrador/admi-application/admi
     MatToolbarModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatOptionModule
+    MatOptionModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
