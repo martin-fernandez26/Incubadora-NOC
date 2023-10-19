@@ -23,7 +23,7 @@ async function createUser(req, res) {
     // Verificar que si existe un usuario con igual nombre de usuario
     let user = await User.findOne({ where: { nombreUsuario } });
     if (user !== null){
-      return res.status(205).json({ msg: 'Usuario ya existente'})
+      return res.status(409).json({ msg: ` El usuario ${nombreUsuario}  ya existe`})
     }
     // Si no existe un usuario
     const usuarioCreado = await userService.crearUsuario(nuevoUsuario);

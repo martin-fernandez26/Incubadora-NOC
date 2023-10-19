@@ -1,27 +1,31 @@
 <mat-card class="login-container">
     <mat-card-content>
         <img src="assets/img/incubadora-image.png" alt="Logo" class="logo">
-        <form class="login-form">
-
+        <form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
             <mat-form-field>
-                <mat-label>Usuario</mat-label>
-                <input matInput class="input-item-login">
+              <mat-label>Usuario</mat-label>
+              <input matInput class="input-item-login" name="username" [(ngModel)]="username" required>
+              <!-- Mensaje de error para el campo Usuario -->
+              <mat-error *ngIf="loginForm.controls['username'].invalid">Campo obligatorio</mat-error>
             </mat-form-field>
-            
+          
             <mat-form-field>
-                <mat-label>Contraseña</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
+              <mat-label>Contraseña</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="password" required>
+              <!-- Mensaje de error para el campo Contraseña -->
+              <mat-error *ngIf="loginForm.controls['password'].invalid">Campo obligatorio</mat-error>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
             </mat-form-field>
-
-            <button mat-raised-button color="warn">Iniciar Sesion</button>
-
+          
+            <button mat-raised-button color="warn" type="submit">Iniciar Sesion</button>
+          
             <p class="mensaje-crear-cuenta">
-                ¿No tienes cuenta? Haz clic en <a class="register-button" routerLink="/registro"> CREAR CUENTA</a>
+              ¿No tienes cuenta? Haz clic en <a class="register-button" routerLink="/registro"> CREAR CUENTA</a>
             </p>
-        </form>
+          </form>
+          
     </mat-card-content>
 </mat-card>
   
