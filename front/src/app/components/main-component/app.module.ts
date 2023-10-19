@@ -69,6 +69,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     MatSnackBarModule,
     MatTableModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
